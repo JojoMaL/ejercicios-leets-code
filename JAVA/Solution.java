@@ -14,7 +14,6 @@
     //}
 //}
 // EL DE ANTES ES DE JEIMI EL QUE SIGUE ES EL MIO....
-import java.util.ArrayList;
 import java.util.HashMap;
 class Solution {
     public int[] twoSum(int[] nums, int target) {
@@ -30,17 +29,30 @@ class Solution {
     return null;
     }
 
-// no es la forma que va a servir con leets code.voy a hacer la otra opcion.
-    public int removeElement(ArrayList<Integer> nums, int val){
-        int i = 0;
-        while (i < nums.size()) {
-            if (val == nums.get(i)){
-                nums.remove(i);
-            }else{
-                i++;
-            }
+// no es la forma que va a servir con leets code.voy a hacer la otra opcion. creo que es porque no me dejan usar Arraylist y por ende no puedo usar size o get
+    //public int removeElement(ArrayList<Integer> nums, int val){
+      //  int i = 0;
+        //while (i < nums.size()) {
+          //  if (val == nums.get(i)){
+            //    nums.remove(i);
+            //}else{
+             //   i++;
+            //}
             
+        //}
+        //return nums.size();
+    
+        //}
+    public int removeElement(int[] nums, int val){
+        int k=0;
+        for (int i=0; i < nums.length;i++){
+           if(nums[i] !=val){
+            nums[k] = nums[i];
+            k++;
+           } 
         }
-        return nums.size();
+        return k;
     }
-}
+
+
+    }
